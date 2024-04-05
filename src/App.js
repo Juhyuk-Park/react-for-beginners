@@ -2,19 +2,21 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 import About from "./routes/About";
+import { element } from "prop-types";
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path={process.env.PUBLIC_URL + "/"} element={<Home />}></Route>
-        <Route
-          path={process.env.PUBLIC_URL + "/movie/:id"}
-          element={<Detail />}
-        ></Route>
+        l
         <Route
           path={process.env.PUBLIC_URL + "/about"}
-          element={<About />}
+          component={About}
         ></Route>
+        <Route
+          path={process.env.PUBLIC_URL + "/movie/:id"}
+          component={Detail}
+        ></Route>
+        <Route path={process.env.PUBLIC_URL + "/"} component={Home}></Route>
       </Switch>
     </Router>
   );
