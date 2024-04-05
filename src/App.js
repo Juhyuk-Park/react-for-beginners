@@ -4,11 +4,17 @@ import Detail from "./routes/Detail";
 import About from "./routes/About";
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Switch>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/movie/:id" element={<Detail />}></Route>
-        <Route path="/" element={<Home />}></Route>
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Home />}></Route>
+        <Route
+          path={process.env.PUBLIC_URL + "/movie/:id"}
+          element={<Detail />}
+        ></Route>
+        <Route
+          path={process.env.PUBLIC_URL + "/about"}
+          element={<About />}
+        ></Route>
       </Switch>
     </Router>
   );
