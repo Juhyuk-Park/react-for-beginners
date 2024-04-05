@@ -6,15 +6,9 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/movie/:id">
-          <Detail />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/movie/:id" element={<Detail />}></Route>
+        <Route path="/" element={<Home />}></Route>
       </Switch>
     </Router>
   );
