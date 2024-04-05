@@ -1,0 +1,17 @@
+#container {
+  display: flex;
+  align-items: center;
+  background-color: #1d1d1d;
+  height: 60px;
+}
+
+#container > span {
+  padding: 0 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
