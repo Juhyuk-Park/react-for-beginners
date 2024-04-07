@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Detail.module.css";
-import Nav from "../components/Nav";
 
 function Detail() {
   const [loading, setLoading] = useState(true);
@@ -23,7 +22,6 @@ function Detail() {
         <h1>Loading...</h1>
       ) : (
         <div id={styles.body}>
-          <Nav />
           <div
             id={styles.background_image}
             style={{

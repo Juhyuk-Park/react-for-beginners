@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Nav from "../components/Nav";
 import Movie from "../components/Movie";
 
 function Home() {
@@ -22,8 +21,7 @@ function Home() {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <div>
-          <Nav />
+        <>
           {movies.map((movie) => (
             <Movie
               key={movie.id}
@@ -34,7 +32,7 @@ function Home() {
               genres={movie.genres}
             />
           ))}
-        </div>
+        </>
       )}
     </div>
   );

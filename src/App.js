@@ -1,23 +1,21 @@
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import Nav from "./components/Nav";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 import About from "./routes/About";
 function App() {
   return (
-    <Router>
+    <>
+      <Nav />
       <Switch>
-        l
-        <Route
-          path={process.env.PUBLIC_URL + "/about"}
-          component={About}
-        ></Route>
+        <Route path={process.env.PUBLIC_URL + "/about"} component={About} />
         <Route
           path={process.env.PUBLIC_URL + "/movie/:id"}
           component={Detail}
-        ></Route>
-        <Route path={process.env.PUBLIC_URL + "/"} component={Home}></Route>
+        />
+        <Route path={process.env.PUBLIC_URL + "/"} component={Home} />
       </Switch>
-    </Router>
+    </>
   );
 }
 
